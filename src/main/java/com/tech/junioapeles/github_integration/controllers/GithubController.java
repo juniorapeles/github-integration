@@ -24,7 +24,7 @@ public class GithubController {
     public ResponseEntity<List<RepositoryResponse>> listRepo(@RequestHeader("token") String token) {
 
         var repos = githubClient.listRespos(
-                "Bearer" + token,
+                "Bearer " + token,
                 null,
                 "public"
         );
